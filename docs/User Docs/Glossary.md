@@ -7,6 +7,7 @@ CBC – Cipher block chaining
 CKR – Common Key Reference
 DES – Data Encryption Standard
 DLI – Data Link Independent
+EKC - Encrypted Key Container
 IP – Internet Protocol
 IPv4 – Internet Protocol Version 4
 IPv6 – Internet Protocol Version 6
