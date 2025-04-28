@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Security Considerations - Keysmiths Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Security Considerations";
+        var mkdocs_page_input_path = "User Docs/Security.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Keysmiths Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Legal/">Legal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../License/">License</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Docs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development%20Docs/Cable%20Assembly/">Cable Assembly</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Environment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Development%20Docs/Environment/Firmware/">Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Development%20Docs/Environment/Software/">Software</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Docs</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Keysmiths User Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Keyload%20Type/">Keyload Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../P25%20MR/">P25 MR</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Security Considerations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#p25-keyloading-considerations">P25 Keyloading Considerations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kfdtool-specific-considerations">KFDtool-specific Considerations</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../XTS%20Adapter%20Mod/">XTS Hirose adapter modification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Adapters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/">Adapters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdmicro/">KFDMicro</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdnano/">KFDnano</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdpico/">KFDpico</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdshield/">KFDShield</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdtool/">KFDtool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Container</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Container/">Container</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Export</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Export/DKF%20Export/">DKF Export</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Export/Elite%20Export/">Elite Export</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Keysmiths Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Docs</li>
+      <li class="breadcrumb-item active">Security Considerations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="security-considerations">Security Considerations</h1>
+<p>This section is intended to be a non-exhaustive list of factors to consider when evaluating the security of a KFDtool system.</p>
+<h2 id="p25-keyloading-considerations">P25 Keyloading Considerations</h2>
+<ul>
+<li>
+<p>Some radios store keys in software rather than hardware, making them potentially retrievable. </p>
+<ul>
+<li>What this means<ul>
+<li>Some keys are stored in a hardware security module or HSM (e.g. UCM, MACE) which is very secure as barring an exploit for the specific chip being used, once written the keys are unable to be retrieved as plaintext from the HSM. Additionally, many HSMs have various methods of tamper detection to erase all keys if the unit is tampered with. This means that ideally, if an attacker had physical access to the radio, they would be unable to retrieve the key material from the radio. However, some radios store keys in software (e.g. software ADP, Motorola APX900 and Kenwood VP8000 software crypto), which has far fewer protections than a hardware security module. A skilled attacker, given enough time with a radio, could extract key material from a radio using software encryption. This is not to say that software encryption has no place; however it should be factored in when evaluating your individual threat model.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Keys are forever.</p>
+<ul>
+<li>What this means<ul>
+<li>It is not always possible to remotely erase a lost radio's keys for a multitude of reasons. Therefore, if a keyed radio is lost, any keys that were installed in it should be considered compromised.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="kfdtool-specific-considerations">KFDtool-specific Considerations</h2>
+<ul>
+<li>
+<p>The KFDtool as a computer peripheral has several important considerations to keep in mind when secure keyloading is required.</p>
+<ul>
+<li>What this means<ul>
+<li>Because the KFDtool keyloader is made up of a USB peripheral and software for use on a Windows PC, precautions have to be taken to preserve the integrity of the encryption keys due to the complex nature of the systems involved.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The following points are only valid with unmodified software, firmware, and hardware. With physical access to the PC or adapter, the software, firmware, or hardware could be modified to covertly retain the plaintext keying material.</p>
+<ul>
+<li>What this means<ul>
+<li>With physical access to the KFDtool adapter or computer running the KFDtool software, someone could modify them in a way to record or transmit the encryption keys without your knowledge. Therefore, you should physically secure the KFDtool adapter and the computer used for keyloading.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Plaintext keying material is present in the PC's RAM, over the USB connection, in the adapter's RAM, and over the keyload connection. Therefore, you must trust the PC that the software is running on, or air gap it.</p>
+<ul>
+<li>What this means<ul>
+<li>If the computer you use for keyloading is connected to a network, it is possible that the encryption keys could be accessed without your knowledge due to vulnerabilities in Windows or other software installed on your computer. Therefore, it is recommended that you use a computer that is not connected to any networks, and that you only install software and connect devices to it that you trust.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>It is possible that plaintext keying material in the PC's RAM is paged out to disk. It is also possible that Windows crash dumps may contain plaintext keying material. Therefore, it is recommended that the PC's hard drive is protected using full disk encryption such as BitLocker and powered off when unattended.</p>
+<ul>
+<li>What this means<ul>
+<li>Windows is a complex operating system, and there are many ways for the encryption keys to end up on the hard drive without your knowledge. Therefore, encrypting the hard drive of the computer you use for keyloading is a good idea as it provides another layer of security against unauthorized users accessing the encryption keys without your knowledge.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>After the KFDtool adapter has been disconnected from the USB port, any residual plaintext keying material present in the microcontroller's RAM will be lost.</p>
+<ul>
+<li>What this means<ul>
+<li>When unplugging the KFDtool adapter from the computer, any encryption keys are lost due to the memory type used. The KFDtool adapter by design does not store any encryption keys.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>When certain non-default logging is enabled, plaintext keying material is written out to the log file on disk. This logging should only be enabled when diagnostic information needs to be collected, and only used with dummy keying material.</p>
+<ul>
+<li>What this means<ul>
+<li>There are options in the KFDtool software configuration files that can be set to write detailed information to the hard drive for use to diagnose issues. If you are directed to change these files to enable logging to diagnose an issue, understand that the keys you use may be included in these logs. Therefore, you should not use your production keys when collecting these logs.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../P25%20MR/" class="btn btn-neutral float-left" title="P25 MR"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../XTS%20Adapter%20Mod/" class="btn btn-neutral float-right" title="XTS Hirose adapter modification">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../P25%20MR/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../XTS%20Adapter%20Mod/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>XTS Hirose adapter modification - Keysmiths Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "XTS Hirose adapter modification";
+        var mkdocs_page_input_path = "User Docs/XTS Adapter Mod.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Keysmiths Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Legal/">Legal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../License/">License</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Docs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development%20Docs/Cable%20Assembly/">Cable Assembly</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Environment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Development%20Docs/Environment/Firmware/">Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Development%20Docs/Environment/Software/">Software</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Docs</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Keysmiths User Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Keyload%20Type/">Keyload Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../P25%20MR/">P25 MR</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Security/">Security Considerations</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">XTS Hirose adapter modification</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Adapters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/">Adapters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdmicro/">KFDMicro</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdnano/">KFDnano</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdpico/">KFDpico</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdshield/">KFDShield</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Adapters/kfdtool/">KFDtool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Container</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Container/">Container</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Export</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Export/DKF%20Export/">DKF Export</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Export/Elite%20Export/">Elite Export</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Keysmiths Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Docs</li>
+      <li class="breadcrumb-item active">XTS Hirose adapter modification</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="xts-hirose-adapter-modification">XTS Hirose adapter modification</h1>
+<p>A Motorola NTN8613C Hirose adapter for XTS can be modified to be used on both Motorola and EF Johnson radios. However, there are some caveats:</p>
+<ol>
+<li>Audio accessories will continuously transmit when used with the adapter (OPT_SEL1 is pulled low by the audio accessory but OPT_SEL2 is tied low all the time)</li>
+<li>This may trigger the man down function as OPT_SEL2 is tied low all the time even when CTS is not pulled low (CTS low = keyload mode for Motorola, pulled low by KVL/KFDtool)</li>
+<li>For EFJ radios, you need to connect the adapter to the Hirose cable and the KVL/KFDtool first, then connect to the radio. If you connect the adapter to the radio first and then connect the Hirose cable it will not work. This is because multiple pins need to be asserted simultaneously for the EFJ radio to go into keyload mode.</li>
+</ol>
+<p>To complete the modification, use a soldering iron to bridge the two contacts shown in the image below:</p>
+<p><img alt="XTS Adapter Modification" src="../img/xts-mod.jpg" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Security/" class="btn btn-neutral float-left" title="Security Considerations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Adapters/" class="btn btn-neutral float-right" title="Adapters">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Security/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Adapters/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
