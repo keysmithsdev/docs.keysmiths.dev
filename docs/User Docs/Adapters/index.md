@@ -1,4 +1,4 @@
-# TWI Adapters
+# Adapters
 
 An adapter is necessary to fill a radio over TWI. A non-exhaustive list of known compatible adapters can be found below.
 

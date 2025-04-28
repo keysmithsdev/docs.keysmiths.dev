@@ -1,2 +1,4 @@
 site_name: Keysmiths Docs
 theme: readthedocs
+markdown_extensions:
+  - footnotes
