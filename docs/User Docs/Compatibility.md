@@ -12,6 +12,7 @@ If you have used KFDtool with a radio that is not listed, please get in touch so
 | EF Johnson VP/VM x000        | ❔ Untested      | —                | —            | —                       |
 | EF Johnson VP/VM x00         | ✅ Tested        | ≥ 1.8.7          | ≥ 1.8.7      | ≥ 8.28.5                |
 | EF Johnson 5100/ES           | ✅ Tested        | ≥ 1.7.3          | ≥ 1.7.3      | ≥ 6.12.4                |
+[^xtsmod]
 | EF Johnson 5300/ES           | ❔ Untested      | —                | —            | —                       |
 | Harris XL                    | ✅ Tested        | ≥ 1.8.7          | ≥ 1.8.7      | Any                     |
 | Harris Unity (XG-100)        | ✅ Tested        | ≥ 1.8.7          | ≥ 1.8.7      | Any                     | [^ch100]
@@ -31,3 +32,4 @@ If you have used KFDtool with a radio that is not listed, please get in touch so
 [^freon]: "Freon" (OMAP L-138) architecture only (APX 900, 6000 BN, 8000, 8500, NEXT, N-series, and BN mobiles)
 [^harrisxg]: Harris XG radios require Harris adapter cable (portable: unknown part number; mobile: 14002-0143-10)
 [^kenwood]: Requires SCM hardware module
+[^xtsmod]: Can use a modified Motorola XTS Hirose adapter (part number NTN8613C). See the [Modifying an XTS Adapter](XTS Adapter Mod.md) page for more info
